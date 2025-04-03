@@ -1,0 +1,467 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        
+
+        .contenedorPresentacion{
+            position: relative;
+            width: 100%;
+            height: 620px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .contenedorPresentacion::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #009C81; /* Verde */
+            clip-path: polygon(100% 10%, 100% 100%, -4% 100%);/**/
+            /*z-index: 6;/**/
+        }
+
+        /* Líneas blancas en el fondo verde */
+        .contenedorPresentacion::after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            width: 500px;
+            height: 130px;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(255, 255, 255, 0.7) 0px,
+                rgba(255, 255, 255, 0.7) 1px,
+                transparent 2px,
+                transparent 17px
+            );
+            
+            z-index: 3;
+
+            clip-path: polygon(100% 0, 100% 100%, 28% 100%, 0 0);
+
+        }
+
+        .content {
+            z-index: 1;/**/
+            max-width: 709px;
+            
+            text-align: left;
+            margin-left: 35px;
+            position: relative;
+            bottom:30px;
+            left: 15px;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-size: 70px;
+            line-height: 1;
+        }
+
+        
+
+        .content span {
+            color: #009C81;
+            font-weight: bold;
+        }
+
+        .content .texto{
+            width: 608px;
+            margin-top: 30px;
+            line-height: 1.7;
+            color: #293136;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #009879;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+
+        }
+
+
+
+        p{
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            margin: 17px 0;
+        }
+
+        .encabezado{
+            height: 7em;
+            border-bottom: 1px solid #ebebeb;
+        }
+        .logo{
+            display: flex;
+        }
+        
+        .logo #tituloLogo{
+            /*background-color: #009879;/**/
+            width: 160px;
+            height: 65px;
+            padding: 0 10px ;
+            align-items: center;
+        }
+
+        .seccion2{
+            margin: 20px;
+            padding: 30px;
+            
+        }
+        .contenedorTestimonios{
+            display: flex;
+            padding: 0px 60px;
+            
+        }
+
+        .contenedorTestimonios p{
+            font-size: 17px;
+        }
+        
+
+        #p-Testimonio{
+            max-width: 500px;
+            line-height: 1.7;
+        }
+
+
+
+.titulos{
+    margin: 30px 60px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+.carrusel {
+    margin-left: 60px;
+    width: 14%; /* Ajuste opcional para que no ocupe el 100% */
+    max-width: 400px; /* Define un ancho máximo para evitar que sea demasiado grande */
+    height: 20%; /* Ajusta la altura según sea necesario */
+    overflow: hidden; /* Evita que el contenido sobresalga */
+    display: flex;
+    align-items: center; /* Centra el carrusel dentro del div */
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.carousel-inner video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que se mantenga dentro del contenedor */
+    
+}
+
+#toggleSound {
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #toggleSound:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .piePagina{
+    height: 150px;
+    border-top: 1px solid #ebebeb;
+    background-color: #f5f5f5;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.title {
+    font-family: Arial, cursive;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #111;
+
+}
+.subtitle {
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #444;
+}
+.highlight {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    font-size: 1.5em;
+    color: #2ECC71;
+    text-transform: uppercase;
+   
+    
+}
+.date {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    margin: 0;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/*-------------------------- M O V I L ------------------------------*/
+
+@media (max-width: 576px){
+            
+            
+    #tituloEslogan h1{
+        font-size: 48px;
+        line-height: 1.1;
+        color:#293136;
+    }
+
+    #tituloEslogan span{
+        font-weight: bold;
+    }
+
+    .texto{
+        font-family: 'Poppins', sans-serif;
+        max-width: 250px;
+        color: #293136;
+    }
+
+    .contenedorPresentacion::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 130px;
+    height: 70px;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.7) 0px,
+        rgba(255, 255, 255, 0.7) 1px,
+        transparent 2px,
+        transparent 13px
+    );
+    
+    z-index: 3;
+
+    clip-path: polygon(100% 0, 100% 100%, 45% 100%, 0 0);
+
+    }
+    .contenedorPresentacion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #009C81; /* Verde */
+    clip-path: polygon(100% 60%, 100% 100%, -30% 100%);/**/
+    /*z-index: 6;/**/
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #04735d;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+
+}
+.contenedorPresentacion{
+    position: relative;
+    width: 100%;
+    height: 640px;
+    background: white;
+    display: flex;
+    padding: 70px 15px ;
+    overflow: hidden;
+
+}
+.content {
+    z-index: 1;/**/
+    width: 300px;
+    max-width: 400px;
+    color: #333;
+    text-align: left;
+    margin-left: 5px;
+ 
+}
+
+
+    .contenedorTestimonios{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .titulos{
+        margin: 0px 0px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .contenedorTitulos{
+        margin: 0px;
+        box-sizing: border-box;
+        overflow: auto;
+        
+    }
+
+    .seccion2{
+        margin: 50px 30px;
+    }
+
+    .carrusel {
+        margin-left: 0px;
+        width: 40%; /* Ajuste opcional para que no ocupe el 100% */
+        max-width: 400px; /* Define un ancho máximo para evitar que sea demasiado grande */
+        height: 20%; /* Ajusta la altura según sea necesario */
+        overflow: hidden; /* Evita que el contenido sobresalga */
+        display: flex;
+        align-items: center; /* Centra el carrusel dentro del div */
+        justify-content: center;
+        
+    }
+}
+
+
+/*CARRUSEL II*/
+.carousel{
+    width: 100%;
+    margin: 0px 0px;
+}
+
+@media(min-width: 768px){
+    .carousel{
+        margin: 0px 60px;
+    }
+}
+
+.carrusel-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+
+.carrusel-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5 ease-in-out;
+}
+
+.carrusel{
+    position: relative;
+    width: 210px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+
+.carousel h4{
+    position: absolute;
+    z-index: 1;
+    font-size: 22px;
+    line-height: 23px;
+    color: white;
+    padding: 15px;
+
+}
+
+.carrusel h4 small{
+    font-size: 15px;
+    display: block;
+}
+
+.carrusel a video{
+    object-fit: cover;
+    height: 300px;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
+    transition: .3s ease-in-out;
+}
+
+@media(min-width: 768px){
+    .carrusel{
+        width: 275px;
+    }
+
+    .carrusel a video{
+        width: 250px;
+    }
+
+
+}
+
+.carrusel-arrow{
+    border-radius: 30px;
+    background-color: #e4e3e3;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+}
+
+.carrusel-arrow-focus{
+    outline: 0;
+}
+
+.carrusel-arrow svg{
+    width: 12px;
+    height: 100%;
+    color: rgb(0, 0, 0, 0.7);
+}
+
+.carrusel-prev{
+    left: 0;
+}
+
+.carrusel-next{
+    right: 0;
+}
